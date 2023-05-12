@@ -1,5 +1,6 @@
 @extends('layouts.main')
 
+
 @section('content')
     @php /** @var \App\Models\BlogPost $item */ @endphp
     <div class="container">

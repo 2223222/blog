@@ -11,6 +11,7 @@ class BlogPostUpdateRequest extends FormRequest
      *
      * @return bool
      */
+
     public function authorize()
     {
         //return->auth()->check();
