@@ -8,6 +8,7 @@ use App\Http\Requests\BlogPostUpdateRequest;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
+
 class PostController extends BaseController
 { /**
  * @var BlogPostRepository
