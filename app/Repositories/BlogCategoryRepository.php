@@ -24,6 +24,7 @@ class BlogCategoryRepository extends CoreRepository
         return $this->startConditions()->find($id);
     }
 
+
     /**
      *  Отримати список категорій для виводу в випадаючий список
      *  @return Collection

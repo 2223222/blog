@@ -33,6 +33,7 @@ abstract class CoreRepository
      *  @return Model|\Illuminate\Foundation\Application|mixed
      */
     protected function startConditions()
+
     {
         return clone $this->model;
     }

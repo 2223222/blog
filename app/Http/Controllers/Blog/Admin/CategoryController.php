@@ -17,6 +17,7 @@ class CategoryController extends BaseController
  */
     private $blogCategoryRepository;
 
+
     public function __construct()
     {
         parent::__construct();
