@@ -4,6 +4,7 @@ namespace App\Observers;
 
 use App\Models\BlogCategory;
 
+
 class BlogCategoryObserver
 {   /**
  * Обробка перед створенням запису.

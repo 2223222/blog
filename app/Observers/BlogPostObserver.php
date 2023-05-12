@@ -5,6 +5,7 @@ namespace App\Observers;
 use App\Models\BlogPost;
 use Carbon\Carbon;
 
+
 class BlogPostObserver
 {/**
  * Обробка перед оновленням запису.

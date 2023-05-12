@@ -8,6 +8,7 @@ use App\Models\BlogCategory;
 use App\Observers\BlogPostObserver;
 use App\Observers\BlogCategoryObserver;
 
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
