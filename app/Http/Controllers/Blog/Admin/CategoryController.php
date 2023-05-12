@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 use App\Http\Requests\BlogCategoryUpdateRequest;
 use App\Http\Requests\BlogCategoryCreateRequest;
 
+
 class CategoryController extends BaseController
 { /**
  * @var BlogCategoryRepository
