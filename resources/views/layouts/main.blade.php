@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+php artisan make:controller Blog/Admin/CategoryController --resource<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
