@@ -4,20 +4,30 @@ namespace App\Http\Controllers;
 
 use App\Models\BlogPost;
 use Carbon\Carbon;
+use App\Jobs\ProcessVideoJob;
+use App\Jobs\GenerateCatalog\GenerateCatalogMainJob;
+
 
 class DiggingDeeperController extends Controller
 {
+    public function processVideo()
+    {
+        ProcessVideoJob::dispatch();
+        // Відкладення виконання завдання від моменту потрапляння в чергу.
+        // Не впливає на паузу між спробами виконання завдання.
+        //->delay(10)
+        //->onQueue('name_of_queue')
+    }
+
     /**
-     * Базова інформація
-     * @url https://laravel.com/docs/8.x/collections#introduction
+     * @link http://blog.com/digging_deeper/prepare-catalog
      *
-     * Довідкова інформація
-     * @url https://laravel.com/api/8.x/Illuminate/Support/Collection.html
-     *
-     * Варіант колеції для моделі eloquent
-     * @url https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Collection.html
-     *
+     * php artisan queue:listen --queue=generate-catalog --tries=3 --delay=10
      */
+    public function prepareCatalog()
+    {
+        GenerateCatalogMainJob::dispatch();
+    }
 
     public function collections()
     {
